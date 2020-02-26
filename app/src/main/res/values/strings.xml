@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="permissionOK"> Gracias</string>
+    <string name="permissionKO"> Es necesario para mostrar los contactos</string>
+</resources>
