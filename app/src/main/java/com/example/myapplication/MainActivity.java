@@ -16,21 +16,23 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton contactsButton;
     private ImageButton photosButton;
+    int MY_PERMISSIONS_REQUEST_READ_CONTACTS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         contactsButton = findViewById(R.id.imageContacts);
-        photosButton = findViewById(R.id.photosButton);
+        //photosButton = findViewById(R.id.photosButton);
 
-        contactsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Here, thisActivity is the current activity
-                Intent intent = new Intent(getApplicationContext(), ContactsActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
     }
+    public void permisoContactos(View v){
+        // Here, thisActivity is the current activity
+        Intent intent = new Intent(v.getContext(), ContactsActivity.class);
+        //intent.putExtra("permiso",permissionCheck);
+        startActivity(intent);
+    }
+
 }
