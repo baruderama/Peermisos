@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton contactsButton;
+
     private ImageButton photosButton;
     int MY_PERMISSIONS_REQUEST_READ_CONTACTS;
     @Override
@@ -22,17 +22,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        contactsButton = findViewById(R.id.imageContacts);
-        //photosButton = findViewById(R.id.photosButton);
-
-
-
     }
     public void permisoContactos(View v){
         // Here, thisActivity is the current activity
         Intent intent = new Intent(v.getContext(), ContactsActivity.class);
         //intent.putExtra("permiso",permissionCheck);
         startActivity(intent);
+    }
+
+    public void permisoCamara(View v){
+        Intent intent=new Intent(v.getContext(),ActividadCamara.class);
+        startActivity(intent);
+
     }
 
 }

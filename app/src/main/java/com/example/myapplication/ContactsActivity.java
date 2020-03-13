@@ -62,9 +62,6 @@ public class ContactsActivity extends MainActivity {
                 ActivityCompat.requestPermissions(context,
                         new String[]{permiso}, idCode);
 
-            //Toast.makeText(context, "denegado", Toast.LENGTH_LONG).show();
-
-            // request the permission.
 
         }
         else {
@@ -72,7 +69,6 @@ public class ContactsActivity extends MainActivity {
         }
     }
 
-        // El contexto es la actividad principal
 
 
     @Override
@@ -100,60 +96,4 @@ public class ContactsActivity extends MainActivity {
             }
 
     }
-     /*
-    static final int PERMISSION_CONTACTS_ID = 5;
-    TextView tvPermissionState;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacts);
-        //tvPermissionState = findViewById(R.id.tvPermissionState);
-        requestPermission(this, Manifest.permission.WRITE_CONTACTS, "Es necesario para mostrar los contactos", PERMISSION_CONTACTS_ID );
-        initViews();
-    }
-
-    public void initViews(){
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)== PackageManager.PERMISSION_GRANTED){
-            tvPermissionState.setText(getResources().getString(R.string.permissionOK));
-            tvPermissionState.setTextColor(Color.GREEN);
-        }else {
-            tvPermissionState.setText(getResources().getString(R.string.permissionKO));
-            tvPermissionState.setTextColor(Color.RED);
-        }
-    }
-
-    /**
-     * Metodo para solicitar un permiso
-     * @param context actividad actual
-     * @param permission permiso que se desea solicitar
-     * @param just justificacion para el permiso
-     * @param id identificador con el se marca la solicitud y se captura el callback de respuesta
-     */
-     /*
-    public void requestPermission(Activity context, String permission, String just, int id) {
-        if (ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(context, permission)) {
-                // Show an expanation to the user *asynchronously*Â  Â
-                Toast.makeText(context, just, Toast.LENGTH_LONG).show();
-            }
-            // request the permission.Â  Â
-            ActivityCompat.requestPermissions(context, new String[]{permission}, id);
-
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        initViews();
-        //Si se tienen varios casos
-//        switch(requestCode){
-//            case PERMISSION_CONTACTS_ID: {
-//
-//                return;
-//            }
-//        }
-    }
-
-      */
 }
